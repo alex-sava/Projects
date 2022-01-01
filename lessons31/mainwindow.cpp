@@ -23,14 +23,15 @@ void MainWindow::on_pushButton_clicked()
     //QMessageBox::critical(this, "Внимание", "Ошибка данных");
     //QMessageBox::information(this, "Информация", "Будьте осторожны!");
     //QMessageBox::warning(this, "Предупреждение", "Будьте осторожны!");
-    QMessageBox::StandardButton reply = QMessageBox::question(this, "Вопрос", "Вы будите гулять?", QMessageBox::Yes | QMessageBox::No);
 
-    if (reply == QMessageBox::Yes) {
-        QApplication::quit();
-    } else {
-        qDebug() << "Кнопка НЕТ была нажата";
+    QMessageBox::StandardButton answer = QMessageBox::question(this, "Опрос:", "У вас есть машина?");
+
+    if (answer==QMessageBox::Yes){
+        QMessageBox::information(this, "ОКОШКО","Поздравляем вас!!! У вас есть автомобиль, урааа!");
     }
-
+    else {
+        QMessageBox::warning(this, "ОКОШКО","У вас пока нет машины, но мы уверены, что скоро она появится");
+    }
 
 }
 

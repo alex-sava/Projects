@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/resourec">
+        <file>img/Screenshot_1.jpg</file>
+        <file>img/Screenshot_2.jpg</file>
+        <file>img/C++.jpg</file>
+    </qresource>
+</RCC>

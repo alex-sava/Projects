@@ -13,17 +13,30 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>170</y>
+     <width>147</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Открыть еще новое окно</string>
+   </property>
+  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>260</x>
-     <y>180</y>
-     <width>131</width>
+     <y>140</y>
+     <width>152</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>Привет, МИР!!!</string>
+    <string>Hello from SecondWindow!!!</string>
    </property>
   </widget>
  </widget>

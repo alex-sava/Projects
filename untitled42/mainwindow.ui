@@ -19,8 +19,8 @@
      <widget class="QLabel" name="image1">
       <property name="minimumSize">
        <size>
-        <width>20</width>
-        <height>20</height>
+        <width>200</width>
+        <height>200</height>
        </size>
       </property>
       <property name="text">
@@ -128,7 +128,7 @@
        <property name="geometry">
         <rect>
          <x>30</x>
-         <y>400</y>
+         <y>330</y>
          <width>211</width>
          <height>21</height>
         </rect>
@@ -145,6 +145,124 @@
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>660</y>
+         <width>136</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 0);</string>
+       </property>
+       <property name="text">
+        <string>Проверка Radoi_Button</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox1">
+       <property name="geometry">
+        <rect>
+         <x>164</x>
+         <y>625</y>
+         <width>76</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>CheckBox</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>390</y>
+         <width>143</width>
+         <height>182</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>&lt;b&gt;УРА&lt;/b&gt;
+&lt;h1&gt;Заголовок 4&lt;/h1&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Заголовок 4&lt;/li&gt;
+&lt;li&gt;Заголовок 5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Заголовок 4&lt;/li&gt;
+&lt;li&gt;Заголовок 5&lt;/li&gt;
+&lt;/ol&gt;
+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>290</x>
+         <y>540</y>
+         <width>75</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>103</x>
+         <y>611</y>
+         <width>55</width>
+         <height>48</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QRadioButton" name="radioButton_3">
+          <property name="text">
+           <string>Гоша</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_4">
+          <property name="text">
+           <string>Петя</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>41</x>
+         <y>611</y>
+         <width>56</width>
+         <height>48</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QRadioButton" name="radioButton">
+          <property name="text">
+           <string>Марк</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_2">
+          <property name="text">
+           <string>Джон</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>

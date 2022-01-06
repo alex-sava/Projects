@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    qDebug()<<"Delete ui";
 }
 
 
@@ -48,4 +49,26 @@ void MainWindow::on_Enter_clicked()
     QString user_input = ui->input_text->text();
     ui->statusbar->showMessage(user_input);
 }*/
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    if(ui->radioButton->isChecked()) {
+        ui->statusbar->showMessage("Выбран Марк");
+    }
+    if(ui->radioButton_2->isChecked()) {
+        ui->statusbar->showMessage("Выбран Джон");
+    }
+}
+
+
+void MainWindow::on_checkBox1_stateChanged(int arg1)
+{
+    if(ui->checkBox1->isChecked()) {
+        ui->statusbar->showMessage("Галочка поставлена");
+    } else {
+        ui->statusbar->showMessage("Галочка не поставлена");
+    }
+
+}
 

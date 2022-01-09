@@ -1,8 +1,12 @@
 <RCC>
     <qresource prefix="/resourec">
-        <file>img/Screenshot_1.jpg</file>
-        <file>img/Screenshot_2.jpg</file>
-        <file>img/C++.jpg</file>
         <file>img/bWyA9.png</file>
+        <file>img/qt_exit.png</file>
+        <file>img/qt_new.png</file>
+        <file>img/qt_open.png</file>
+        <file>img/audi.png</file>
+        <file>img/bmw.png</file>
+        <file>img/ford.png</file>
+        <file>img/volvo.png</file>
     </qresource>
 </RCC>

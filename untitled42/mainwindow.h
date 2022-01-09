@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "secondwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,7 +27,26 @@ private slots:
 
     void on_checkBox1_stateChanged(int arg1);
 
+    void on_checkBox_stateChanged(int arg1);
+
+    void on_radioButton_5_clicked();
+
+    void on_radioButton_6_clicked();
+
+    void on_action_triggered();
+
+    void on_action_hovered();
+
+    void on_action_2_triggered();
+
+    void on_action_3_hovered();
+
+    void on_action_3_triggered();
+
+    void on_action_6_triggered();
+
 private:
     Ui::MainWindow *ui;
+    SecondWindow *window;
 };
 #endif // MAINWINDOW_H

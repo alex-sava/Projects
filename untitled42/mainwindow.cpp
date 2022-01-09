@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QPixmap>  //отображение изображений
+//#include "secondwindow.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -61,7 +62,6 @@ void MainWindow::on_pushButton_2_clicked()
     }
 }
 
-
 void MainWindow::on_checkBox1_stateChanged(int arg1)
 {
     if(ui->checkBox1->isChecked()) {
@@ -69,6 +69,71 @@ void MainWindow::on_checkBox1_stateChanged(int arg1)
     } else {
         ui->statusbar->showMessage("Галочка не поставлена");
     }
+
+}
+
+
+
+void MainWindow::on_checkBox_stateChanged(int arg1)
+{
+    if(ui->checkBox->isChecked()) {
+        QMessageBox::information(this,"Info","Галочка поставлена");
+    } else {
+        QMessageBox::information(this,"Info","Галочка не поставлена");
+    }
+
+}
+
+void MainWindow::on_radioButton_5_clicked()
+{
+    QMessageBox::information(this,"Info","Выбрана первая");
+}
+
+
+
+void MainWindow::on_radioButton_6_clicked()
+{
+    QMessageBox::information(this,"Info","Выбрана вторая");
+}
+
+
+void MainWindow::on_action_triggered()
+{
+    ui->statusbar->showMessage("ПОЗДРАВЛЯЮ!!! Вы создали новое окно!!");
+}
+
+
+void MainWindow::on_action_hovered()
+{
+     ui->statusbar->showMessage("Вы точно хотите создать новый проект?");
+}
+
+
+void MainWindow::on_action_2_triggered()
+{
+    ui->statusbar->showMessage("Выберите путь к ранее созданному проекту...");
+}
+
+
+void MainWindow::on_action_3_hovered()
+{
+     ui->statusbar->showMessage("ОСТОРОЖНО!!! Нажатие приведет к закрытию приложения");
+}
+
+void MainWindow::on_action_3_triggered()
+{
+    QApplication::quit();
+}
+
+
+void MainWindow::on_action_6_triggered()
+{
+    //hide();
+    window = new SecondWindow(this);
+    window->show();
+    /*SecondWindow sec_win;
+    sec_win.setModal(true);
+    sec_win.exec();*/
 
 }
 

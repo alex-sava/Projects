@@ -64,6 +64,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_checkBox1_stateChanged(int arg1)
 {
+    Q_UNUSED(arg1);
     if(ui->checkBox1->isChecked()) {
         ui->statusbar->showMessage("Галочка поставлена");
     } else {
@@ -76,6 +77,7 @@ void MainWindow::on_checkBox1_stateChanged(int arg1)
 
 void MainWindow::on_checkBox_stateChanged(int arg1)
 {
+    Q_UNUSED(arg1);
     if(ui->checkBox->isChecked()) {
         QMessageBox::information(this,"Info","Галочка поставлена");
     } else {

@@ -8,14 +8,20 @@ SecondWindow::SecondWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QListWidgetItem *item_1 = new QListWidgetItem(QIcon(":/resourec/img/audi.png"),"Audi");
-    ui->listWidget->addItem(item_1);
-    QListWidgetItem *item_2 = new QListWidgetItem(QIcon(":/resourec/img/bmw.png"),"BMW");
-    ui->listWidget->addItem(item_2);
-    QListWidgetItem *item_3 = new QListWidgetItem(QIcon(":/resourec/img/volvo.png"),"Volvo");
-    ui->listWidget->addItem(item_3);
-    QListWidgetItem *item_4 = new QListWidgetItem(QIcon(":/resourec/img/ford.png"),"Ford");
-    ui->listWidget->addItem(item_4);
+    QString words[] = {"Alex", "John", "Josh", "Tom", "Bob"};
+
+    for (int number = 0; number < 5; number++) {
+        ui->listWidget->addItem(words[number]);
+    }
+    QListWidgetItem *item_6 = new QListWidgetItem(QIcon(":/resourec/img/audi.png"),"Audi");
+    ui->listWidget->addItem(item_6);
+    QListWidgetItem *item_7 = new QListWidgetItem(QIcon(":/resourec/img/bmw.png"),"BMW");
+    ui->listWidget->addItem(item_7);
+    QListWidgetItem *item_8 = new QListWidgetItem(QIcon(":/resourec/img/volvo.png"),"Volvo");
+    ui->listWidget->addItem(item_8);
+    QListWidgetItem *item_9 = new QListWidgetItem(QIcon(":/resourec/img/ford.png"),"Ford");
+    ui->listWidget->addItem(item_9);
+    ui->listWidget->addItem("...и т.д.");
 }
 
 SecondWindow::~SecondWindow()
@@ -30,4 +36,11 @@ void SecondWindow::on_pushButton_clicked()
     ui->listWidget->currentItem()->setBackground(Qt::blue);
     ui->listWidget->currentItem()->setForeground(Qt::white);
 }
+
+
+/*void SecondWindow::on_listWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
+{
+    Q_UNUSED(previous);
+    QMessageBox::information(this, "Окно", current->text());
+}*/
 

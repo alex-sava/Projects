@@ -1,5 +1,6 @@
 #ifndef SECONDWINDOW_H
 #define SECONDWINDOW_H
+//#include <QListWidgetItem>
 
 #include <QDialog>
 
@@ -17,6 +18,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    //void on_listWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
 
 private:
     Ui::SecondWindow *ui;

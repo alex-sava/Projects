@@ -321,7 +321,7 @@ public:
         bottom_label->setObjectName(QString::fromUtf8("bottom_label"));
         bottom_label->setGeometry(QRect(0, 370, 231, 30));
         QFont font3;
-        font3.setPointSize(13);
+        font3.setPointSize(16);
         bottom_label->setFont(font3);
         MainWindow->setCentralWidget(centralwidget);
 

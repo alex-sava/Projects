@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButton_mult,SIGNAL(clicked()), this, SLOT(math_operations()));
     connect(ui->pushButton_divide,SIGNAL(clicked()), this, SLOT(math_operations()));
 
-    ui->pushButton_divide->setCheckable(true); //разрешение на установку setChecked
+    ui->pushButton_divide->setCheckable(true); //разрешение на установку setChecked, кнопка-триггер
     ui->pushButton_mult->setCheckable(true);
     ui->pushButton_minus->setCheckable(true);
     ui->pushButton_plus->setCheckable(true);
@@ -48,7 +48,7 @@ void MainWindow::digits_numbers() {
     double all_numbers = 0;
     QString new_label;
 
-    // Все будет работать только когда введено менее 13 цифр
+    // Все будет работать только когда введено менее 10 цифр
     if(ui->result_show->text().length() < 10) {
         if (ui->result_show->text().contains('.') && (button->text() == '0')) {
             new_label = ui->result_show->text() + button->text();
@@ -94,7 +94,16 @@ void MainWindow::math_operations()
     num_first = ui->result_show->text().toDouble();
     ui->result_show->setText("");
     button->setChecked(true);
-    ui->bottom_label->setText("Первое число: " + QString::number(num_first));
+
+    if(ui->pushButton_plus->isChecked()) {
+        ui->bottom_label->setText(QString::number(num_first) + "+");
+    } else if(ui->pushButton_minus->isChecked()) {
+        ui->bottom_label->setText(QString::number(num_first) + "-");
+    } else if(ui->pushButton_divide->isChecked()) {
+        ui->bottom_label->setText(QString::number(num_first) + "/");
+    } else if(ui->pushButton_mult->isChecked()){
+        ui->bottom_label->setText(QString::number(num_first) + "*");
+    }
 }
 
 void MainWindow::on_pushButton_equal_clicked()
@@ -108,12 +117,14 @@ void MainWindow::on_pushButton_equal_clicked()
         labelNumber = num_first + num_second;
         new_label = QString::number(labelNumber, 'g', 12);
         ui->result_show->setText(new_label);
+        ui->bottom_label->setText(QString::number(num_first) + "+" + QString::number(num_second) + "=" + new_label);
         ui->pushButton_plus->setChecked(false);
 
     } else if(ui->pushButton_minus->isChecked()) {
         labelNumber = num_first - num_second;
         new_label = QString::number(labelNumber, 'g', 12);
         ui->result_show->setText(new_label);
+        ui->bottom_label->setText(QString::number(num_first) + "-" + QString::number(num_second) + "=" + new_label);
         ui->pushButton_minus->setChecked(false);
 
     } else if(ui->pushButton_divide->isChecked()) {
@@ -121,10 +132,12 @@ void MainWindow::on_pushButton_equal_clicked()
             ui->result_show->setText("0");
             QMessageBox::warning(this, "Предупреждение!", "НЮ-НЮ-НЮ! Делить на ноль нельзя!");
             ui->bottom_label->setText(""); // очистка поля первого числа
+            ui->bottom_label->setText(QString::number(num_first) + "/" + QString::number(num_second) + "=" + "Кол тебе!!!");
         } else {
             labelNumber = num_first / num_second;
             new_label = QString::number(labelNumber, 'g', 12);
             ui->result_show->setText(new_label);
+            ui->bottom_label->setText(QString::number(num_first) + "/" + QString::number(num_second) + "=" + new_label);
         }
         ui->pushButton_divide->setChecked(false);
 
@@ -132,6 +145,7 @@ void MainWindow::on_pushButton_equal_clicked()
         labelNumber = num_first * num_second;
         new_label = QString::number(labelNumber, 'g', 12);
         ui->result_show->setText(new_label);
+        ui->bottom_label->setText(QString::number(num_first) + "*" + QString::number(num_second) + "=" + new_label);
         ui->pushButton_mult->setChecked(false);
     }
 }

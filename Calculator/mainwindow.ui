@@ -747,7 +747,7 @@ QPushButton:pressed {
     </property>
     <property name="font">
      <font>
-      <pointsize>13</pointsize>
+      <pointsize>16</pointsize>
      </font>
     </property>
     <property name="text">
